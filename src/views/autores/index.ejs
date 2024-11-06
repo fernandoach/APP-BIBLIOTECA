@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Listando autores</h1>
+  <table border>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Alias</th>
+        <th>Fecha de nacimiento</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i=0; i<autores.length; i++) {%>
+        <tr>
+          <td><%= autores[i].id %></td>
+          <td><%= autores[i].nombre %></td>
+          <td><%= autores[i].alias %></td>
+          <td><%= autores[i].fechaNacimiento %></td>
+          <td>
+            <a href="#">Editar</a>  
+            <a href="#">Eliminar</a>  
+          <td>
+        </tr>  
+      <% } %>
+    </tbody>
+  </table>
+  <a href="#">(+) CREAR NUEVO AUTOR</a>
+</body>
+</html>
