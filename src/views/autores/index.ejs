@@ -25,13 +25,15 @@
           <td><%= autores[i].alias %></td>
           <td><%= autores[i].fechaNacimiento %></td>
           <td>
-            <a href="#">Editar</a>  
-            <a href="#">Eliminar</a>  
+            <a href="/autores/editar/<%=autores[i].id%>">Editar</a>  
+            <form action="/autores/delete/<%=autores[i].id%>" method="post">
+              <button type="submit">Eliminar</button>
+            </form> 
           <td>
         </tr>  
       <% } %>
     </tbody>
   </table>
-  <a href="#">(+) CREAR NUEVO AUTOR</a>
+  <a href="/autores/crear">(+) CREAR NUEVO AUTOR</a>
 </body>
 </html>
